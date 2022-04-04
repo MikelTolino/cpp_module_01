@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 19:48:47 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/04 11:44:13 by mmateo-t         ###   ########.fr       */
+/*   Created: 2022/03/30 19:48:20 by mmateo-t          #+#    #+#             */
+/*   Updated: 2022/04/04 12:17:56 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _ZOMBIE_HPP_
-#define _ZOMBIE_HPP_
-#include <string>
-#include <iostream>
+#include "Zombie.hpp"
+#define NUM 5
+Zombie* zombieHorde( int N, std::string name );
 
-class Zombie
+int	main()
 {
-private:
-	std::string _name;
+	Zombie *horde;
 
-public:
-	Zombie(std::string);
-	Zombie(void);
-	~Zombie();
-	void announce(void);
-};
-
-#endif
+	horde = zombieHorde(NUM, "Pepitos");
+	for (size_t i = 0; i < NUM; i++)
+		horde[i].announce();
+	delete [] horde;
+	return (0);
+}
