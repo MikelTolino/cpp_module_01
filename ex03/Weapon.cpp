@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:18:31 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/06 19:18:40 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/04/06 19:29:27 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 Weapon::Weapon(/* args */)
 {
+}
+
+Weapon::Weapon(std::string type)
+{
+	_type = type;
 }
 
 Weapon::~Weapon()
