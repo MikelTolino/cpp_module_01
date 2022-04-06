@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 12:33:07 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/04 11:44:27 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:21:29 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,16 @@ Zombie::Zombie(std::string name)
 
 Zombie::~Zombie()
 {
-	std::cout << "A poor zombie without brain just DIE... We all remember you. " << _name << std::endl;
+	std::cout << "A poor brainless zombie just DIED... We'll all remember you. " << _name << std::endl;
 }
 
 void Zombie::announce(void)
 {
 	std::cout << _name << " BraiiiiiiinnnzzzZ...\n";
 	return;
+}
+
+void Zombie::setName(std::string name)
+{
+	_name = name;
 }
