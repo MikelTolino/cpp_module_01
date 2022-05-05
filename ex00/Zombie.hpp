@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 19:48:47 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/06 18:14:52 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:25:00 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Zombie(std::string);
 	Zombie(void);
 	~Zombie(void);
-	void announce(void);
+	void _announce(void);
 };
 
 #endif

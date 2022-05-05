@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 12:33:05 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/04 11:03:31 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:25:00 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void randomChump(std::string name) {
 
 	Zombie z(name);
-	z.announce();
+	z._announce();
 }
