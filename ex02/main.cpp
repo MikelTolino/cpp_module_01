@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:49:17 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/09 17:32:21 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/09 17:36:20 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ int main()
 	std::cout << "Content (string): " << string << std::endl;
 	std::cout << "Content (stringPTR): " << *stringPTR << std::endl;
 	std::cout << "Content (stringREF): " << stringREF << std::endl;
+	return (0);
 }
