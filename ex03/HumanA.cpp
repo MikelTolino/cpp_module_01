@@ -6,16 +6,16 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:21:24 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/06 19:53:17 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/09 19:25:49 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include <iostream>
 
-HumanA::HumanA(std::string name, Weapon *w)
+HumanA::HumanA(std::string name, Weapon & w)
 {
-	_weapon = w;
+	_weapon = &w;
 	_name = name;
 }
 

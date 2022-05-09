@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:23:58 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/06 19:54:52 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/09 19:31:05 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ private:
 	Weapon *_weapon;
 
 public:
-	HumanB(std::string);
-	HumanB(std::string, Weapon *);
-	~HumanB();
+	HumanB(std::string const);
+	HumanB( void );
+	~HumanB( void );
 	void attack(void);
-	void setWeapon(Weapon *);
+	void setWeapon(Weapon &);
 };
 
 #endif
