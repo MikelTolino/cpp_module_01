@@ -6,33 +6,34 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/06 19:29:35 by mmateo-t          #+#    #+#              #
-#    Updated: 2022/04/19 12:33:00 by mmateo-t         ###   ########.fr        #
+#    Updated: 2022/05/09 23:23:08 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC:= clang++
-SRCS_DIR.= ./
-SRCS:= $(wildcard $(SRCS_DIR)*.cpp)
+SRCS:= $(wildcard *.cpp)
 OBJS := $(SRCS:%.cpp=%.o)
 CPPFLAGS:= -Wall -Werror -Wextra
 CPPSTD:= -std=c++98
 DEBUG:= -g
 NAME:= replace
+RM:= rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CPPFLAGS) $(CPPSTD) $(OBJS) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(CPPSTD) $(OBJS) -o $(NAME) $(DEBUG)
 
 $(%.o): $(%.c)
-	$(CC) -c $^ -o $@
 	@echo "Creating objects"
+	$(CC) $(DEBUG) $(CPPFLAGS) $(CPPSTD) -c $^ -o $@
 
 clean:
-		rm $(OBJS)
-		@echo "Cleaning objects"
+	@echo "Cleaning objects"
+	$(RM) $(OBJS)
 
 fclean: clean
-		rm $(NAME)
+	@echo "Cleaning $(NAME) and .replace"
+	$(RM) $(NAME) *.replace
 
 re:	fclean all
 

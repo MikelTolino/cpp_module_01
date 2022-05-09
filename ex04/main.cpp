@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:58:27 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/04/19 13:23:24 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/09 23:43:01 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,20 @@ int main(int argc, char const *argv[])
 {
 	std::ifstream infile;
 	std::ofstream outfile;
-	std::string filename(argv[1]);
+	std::string filename;
 	std::string buff;
 	std::string swap;
 
 	if (argc != 4)
 	{
-		std::cerr << "Number of arguments invalid \n" << "Usage: ./replace <file> <tofind> <replace> \n";
+		std::cout << "Error: Number of arguments invalid \n" << "Usage: ./replace <file> <tofind> <replace> \n";
 		return (1);
 	}
+	filename = argv[1];
 	infile.open(argv[1]);
 	if (!infile.is_open())
 	{
-		std::cerr << "File could not be opened\n";
+		std::cout << "Error: File could not be opened\n";
 		return (1);
 	}
 	filename.append(".replace");
