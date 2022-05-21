@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/06 19:29:35 by mmateo-t          #+#    #+#              #
-#    Updated: 2022/05/09 23:23:08 by mmateo-t         ###   ########.fr        #
+#    Updated: 2022/05/21 13:30:19 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ clean:
 
 fclean: clean
 	@echo "Cleaning $(NAME) and .replace"
-	$(RM) $(NAME) *.replace
+	$(RM) $(NAME) examples/*.replace
 
 re:	fclean all
 
