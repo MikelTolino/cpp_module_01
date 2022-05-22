@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 12:59:52 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/21 13:03:06 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/22 17:53:51 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
 	void warning( void );
 	void error( void );
 public:
-	Karen(/* args */);
+	Karen();
 	~Karen();
 	void complain( std::string level );
 };

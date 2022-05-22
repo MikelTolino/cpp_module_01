@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 12:59:58 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/21 13:21:23 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/22 17:55:51 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,22 @@ void Karen::error(void)
 
 void Karen::complain( std::string level )
 {
-	Karen::*pointer_name = &Karen::level;
+	void	(Karen::*complaint[])( void ) = {
+		&Karen::debug,
+		&Karen::info,
+		&Karen::warning,
+		&Karen::error
+	};
+	std::string complaintLevels[] = {
+		"debug",
+		"info",
+		"warning",
+		"error"
+	};
+	for (int i = 0; i < 4; i++)
+	{
+		void (Karen::*selectedComplaint)( void ) = complaint[i];
+		if (level == complaintLevels[i])
+			(this->*selectedComplaint)();
+	}
 }

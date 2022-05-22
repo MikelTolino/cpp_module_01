@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/06 19:29:35 by mmateo-t          #+#    #+#              #
-#    Updated: 2022/05/09 23:23:08 by mmateo-t         ###   ########.fr        #
+#    Updated: 2022/05/22 17:53:09 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJS := $(SRCS:%.cpp=%.o)
 CPPFLAGS:= -Wall -Werror -Wextra
 CPPSTD:= -std=c++98
 DEBUG:= -g
-NAME:= replace
+NAME:= Karen2_0
 RM:= rm -rf
 all: $(NAME)
 
@@ -32,8 +32,8 @@ clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	@echo "Cleaning $(NAME) and .replace"
-	$(RM) $(NAME) *.replace
+	@echo "Cleaning $(NAME)"
+	$(RM) $(NAME)
 
 re:	fclean all
 
